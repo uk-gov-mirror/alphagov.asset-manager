@@ -7,6 +7,8 @@ class AssetsController < ApplicationController
   def show
     @asset = find_asset(include_deleted: true)
 
+    debugger
+
     return error_403 unless can_manage_asset?
 
     expires_now
